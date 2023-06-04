@@ -1,0 +1,117 @@
+@font-face {
+    font-family: 'Nexa Script Heavy';
+    src: url('fonts/nexa_script_heavy.eot');
+    /* IE 9 Compatibility Mode */
+    src: url('fonts/nexa_script_heavy.eot?#iefix') format('embedded-opentype'),
+        /* IE < 9 */
+        url('fonts/nexa_script_heavy.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('fonts/nexa_script_heavy.woff') format('woff'),
+        /* Firefox >= 3.6, any other modern browser */
+        url('fonts/nexa_script_heavy.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('fonts/nexa_script_heavy.svg#nexa_script_heavy') format('svg');
+    /* Chrome < 4, Legacy iOS */
+}
+
+body {
+    background-color: rgb(3, 41, 23);
+}
+
+h1 {
+    color: bisque;
+    font-family: 'Nexa Script Heavy', sans-serif;
+}
+
+h2 {
+    color: beige;
+}
+
+h3 {
+    color: blueviolet;
+}
+
+h4 {
+    color: rgb(235, 134, 201);
+}
+
+a {
+    color: antiquewhite;
+}
+
+.bigtext {
+    font-size: 1.5rem;
+}
+
+p {
+    color: rgb(113, 180, 133);
+}
+
+img {
+    margin-left: 50px;
+    width: 250px;
+}
+
+a:hover {
+    text-decoration: none;
+    /* Убираем подчёркивание */
+    color: #f1de0c;
+    /* Цвет ссылки */
+    background: #AB4A9C;
+    /* Цвет фона */
+}
+
+ul {
+    list-style-type: none;
+    /* Убираем маркеры у списка */
+}
+
+li:before {
+    content: "ƥ ";
+    /* Добавляем в качестве маркера символ */
+}
+
+ul {
+    list-style-type: none;
+    counter-reset: num;
+    position: relative;
+    margin: 0 0 0 60px;
+    padding: 15px 0 5px 0;
+    font-size: 16px;
+}
+
+ul li {
+    position: relative;
+    margin: 0 0 0 0;
+    padding: 0 0 10px 0;
+    line-height: 1.4;
+}
+
+ul li:after {
+    content: counter(num);
+    counter-increment: num;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: -45px;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    background: #80df80;
+    color: #000;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 50%;
+    border: 1px solid #ef6780;
+}
+
+/* Вертикальная линия */
+ul:before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    bottom: 15px;
+    left: -30px;
+    width: 1px;
+    border-left: 1px solid #ef6780;
+}
